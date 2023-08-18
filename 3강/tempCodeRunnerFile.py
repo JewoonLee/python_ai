@@ -1,5 +1,0 @@
-plt.plot(np.log10(alpha_list),train_score)
-plt.plot(np.log10(alpha_list),test_score)
-plt.xlabel('alpha')
-plt.ylabel('R^2')
-plt.show()
