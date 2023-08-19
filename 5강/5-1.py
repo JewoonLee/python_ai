@@ -33,10 +33,10 @@ print(lr.coef_,lr.intercept_)
 # sklearn에서 결정트리 알고리즘 제공 DecisionTreeClassifier
 
 from sklearn.tree import DecisionTreeClassifier
-# dt = DecisionTreeClassifier(random_state=42)
-# dt.fit(train_scaled,train_target)
-# print(dt.score(train_scaled,train_target))
-# print(dt.score(test_scaled,test_target))
+dt = DecisionTreeClassifier(random_state=42)
+dt.fit(train_scaled,train_target)
+print(dt.score(train_scaled,train_target))
+print(dt.score(test_scaled,test_target))
 
 # plot_tree를 통해 그림으로 출력 가능
 import matplotlib.pyplot as plt
@@ -45,9 +45,9 @@ from sklearn.tree import plot_tree
 # plot_tree(dt)
 # plt.show()
 
-# plt.figure(figsize=(10,7))
-# plot_tree(dt, max_depth=1,filled=True,feature_names=['alcohol','sugar','pH'])
-# plt.show()
+plt.figure(figsize=(10,7))
+plot_tree(dt, max_depth=1,filled=True,feature_names=['alcohol','sugar','pH'])
+plt.show()
 
 # leaf노드에 더 많은 클래스가 그 값의 예측값이 됨
 

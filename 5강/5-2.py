@@ -49,7 +49,7 @@ print(np.mean(scores['test_score']))
 
 # 머신러닝 모델이 학습하는 파라미터: 모델 파라미터
 # 모델이 학습 할 수 없어서 사용자가 지정해야 하는 피라미터: 하이퍼파라미터
-# 모델을 바꿔가면서 서치 함
+# 매개변수를 바꿔가면서 서치 함
 # 그리드 서치 사용
 # GrodSearchCV 클래스 임포트 하고 탐색 리스트 딕셔너리 사용
 
@@ -81,7 +81,6 @@ print(gs.cv_results_['params'][best_index])
 # 순서3: 찾은 매개변수를 이용해 전체 훈련 세트 사용해 최종 모델 훈련
 
 # min_impurity_decrease는 노드를 분할하기 위한 불순도 감소 최소량을 지정함.
-
 params = {'min_impurity_decrease':np.arange(0.0001,0.001,0.0001),
           'max_depth': range(5,20,1),
           'min_samples_split':range(2,100,10)
@@ -98,7 +97,7 @@ print(gs.best_params_)
 # 싸이파이(scipy): 적분, 보간, 선형대수, 확률 등 수치 계산 전용
 
 # uniform,randint는 주어진 범위에서 고르게 값을 뽑음, uniform은 실수, randint는 정수
-from scipy.stats import uniform, randint
+    from scipy.stats import uniform, randint
 
 rgen = randint(0,10)
 rgen.rvs(10)
